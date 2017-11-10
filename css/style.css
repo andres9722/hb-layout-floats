@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -9,10 +9,8 @@ body {
 
 .main-header {
     height: 80px;
-    background: #007BDF;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #D8D8D8;    
+    border: 1px solid #979797;
     position: fixed;
     top: 0;
     left: 50%;
@@ -26,51 +24,42 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: .8;
-    font-size: 1.5em;
+    font-size: 2em;
+    text-shadow: 1px 0 0 #979797;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .main-section {
     margin-top: 80px;
 }
 
-.aside-l, .aside-r {
+.aside:nth-last-of-type(1), .aside:nth-last-of-type(2) {
     height: 300px;
-    width: 100%;
-    background: #FF3C32;
+    background: #D8D8D8;
+    border: 1px solid #979797;
 }
 
-.aside-r {
-    background-color: #FBA905;
-}
-
-.secondary-section {
-
-}
-
-.article {
-    width: 100%;    
+.article {   
     height: 120px;
-    background-color: #282D31;
-}
-
-.article:nth-child(2) {
-    background-color: #F63E02;
-}
-
-.article:nth-child(3) {
-    background-color: #282D31;
+    background-color: #D8D8D8;
+    border: 1px solid #979797;
 }
 
 .main-footer {
     height: 200px;
-    background-color: #1B4079;
+    background-color: #D8D8D8;
+    border: 1px solid #979797;
     position: relative;
 }
 
 .content {
     width: 150px;
     height: 150px;
-    background-color: #FAFFFD;
+    background-color: #D8D8D8;
+    border: 1px solid #979797;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -95,16 +84,16 @@ body {
         margin-bottom: 20px;
     }
 
-    .aside-l, .aside-r {
+    .aside:nth-last-of-type(1), .aside:nth-last-of-type(2) {
         width: calc(50% - 10px);     
     }
 
-    .aside-l {
+    .aside:nth-last-of-type(1) {
         float: left;
         margin-right: 20px;
     }
 
-    .aside-r {
+    .aside:nth-last-of-type(2) {
         float: right;
     }
 
@@ -117,19 +106,16 @@ body {
     }
 
     .article:nth-child(1) {
-        background-color: #282D31;
         float: left; 
         margin-right: 20px;
     }
 
     .article:nth-child(2) {
-        background-color: #F63E02;
         margin-right: 20px;
         float: left;
     }
     
     .article:nth-child(3) {
-        background-color: #282D31;
         float: left;
     }
 
